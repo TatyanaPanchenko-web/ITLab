@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,regular,600,700&display=swap" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/css?family=Cardo:italic&display=swap" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700,900&display=swap" rel="stylesheet" >
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>ITlab</title>
+</head>
+
+<body>
+
+    <!--SPRITE-->
+    <svg style="display: none;">
+        <symbol id="facebook" viewBox="0 0 512 512">
+            <g>
+                <path
+                    d="M304,383c0,40.2-0.1,80.3,0.1,120.5c0,4.4-1.2,5.6-5.6,5.5c-34.2-0.2-68.3-0.2-102.5,0   c-4.7,0-6.2-1.1-6.2-6c0.2-79.7,0.1-159.3,0.1-239c0-8,0.9-7-7.3-7.1c-14.5,0-29-0.1-43.5,0.1c-3.5,0-4.5-1.1-4.5-4.6   c0.1-25.3,0.1-50.7,0-76c0-3.5,1-4.6,4.5-4.5c15.2,0.2,30.3-0.1,45.5,0.2c4.1,0.1,5.4-1,5.4-5.3c-0.2-21.3,0-42.7-0.1-64   c-0.1-17.7,2.6-34.8,11.5-50.4c9.6-17,24-28.7,41.8-36.3c15-6.4,30.8-9.4,47-10.3c32.1-1.8,64.3-0.3,96.4-0.9   c3.6-0.1,4.5,1.2,4.5,4.6c-0.1,26.3-0.1,52.7,0,79c0,4-1.5,4.6-5,4.6c-18.5-0.1-37-0.1-55.5-0.1c-15.4,0-26.5,11.1-26.5,26.3   c0,15.7,0.2,31.3-0.1,47c-0.1,4.5,1.4,5.6,5.7,5.6c25.3-0.2,50.7,0,76-0.2c4.2,0,5.6,1.2,5.1,5.4c-1.5,12.9-2.8,25.8-4.2,38.7   c-1.3,12.4-3.5,24.7-5.5,37c-0.6,3.5-1.7,4.3-4.9,4.3c-21.7-0.1-43.3-0.1-65,0c-8.5,0-7.3-1.1-7.3,7.5C304,304,304,343.5,304,383z" />
+            </g>
+        </symbol>
+        <symbol id="twitter" viewBox="0 0 512 512">
+            <g>
+                <path
+                    d="M4,440.5c55.6,5,105.7-9,151.3-43.2c-47.7-4.2-79.6-28-97.4-72.6c15.6,1.9,30.2,2.4,45.7-1.8   c-51.4-16-78.8-49.6-82.5-103.8c15.4,7.2,29.9,12.4,47,12.6c-30.5-22.9-46.1-52.6-45.5-90c0.3-17.2,4.9-33.4,14-48.7   C93.1,159.1,164,195.7,251.3,201.8c-0.5-3.8-0.8-6.8-1.2-9.9c-7.2-55.4,28.8-105.8,83.8-116.3c34.5-6.6,65,2.5,90.8,26.3   c4,3.6,7.4,4.4,12.4,3.1c20.1-5.1,39.2-12.5,57.7-22.5c-7.1,23.4-21.7,41-41.5,55.8c4.5-0.8,9.1-1.4,13.6-2.3   c4.7-1,9.4-2.1,14.1-3.4c4.5-1.2,8.9-2.6,13.3-4.1c4.5-1.5,9-3.2,14.3-4.1c-2.6,3.6-5.1,7.4-7.9,10.9c-11.6,14.7-25,27.6-39.7,39.1   c-1.5,1.2-2.8,3.8-2.7,5.6c0.8,35.5-4.2,70.1-15.7,103.7c-22.6,66.2-62,119.8-121.1,158.1c-29.2,18.9-61.1,31.3-95.2,38.5   c-33.8,7.1-67.8,8.4-101.9,4.4c-34.2-4-66.7-14.1-97.3-29.9c-8.1-4.1-15.9-8.7-23.8-13.1C3.6,441.3,3.8,440.9,4,440.5z" />
+            </g>
+        </symbol>
+        <symbol id="linkedin" viewBox="0 0 24 24">
+            <g>
+                <path
+                    d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
+            </g>
+        </symbol>
+        <symbol id="cross" viewBox="0 0 24 24">
+            <g>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z"
+                    fill="#212429" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"
+                    fill="#212429" />
+            </g>
+        </symbol>
+    </svg>
+
+    <!--HEADER-->
+
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="#" class="header__logo">IT<span class="header__logo header__logo_text">lab</span></a>
+
+                <nav class="nav" id="nav">
+                    <a href="#" class="nav__link" data-scroll="#about">
+                        О нас
+                    </a>
+                    <a href="#" class="nav__link" data-scroll="#work">
+                        Услуги
+                    </a>
+                    <a href="#" class="nav__link" data-scroll="#team">
+                        Наша команда
+                    </a>
+                    <a href="#" class="nav__link" data-scroll="#portfolio">
+                        Портфолио
+                    </a>
+                    <a href="#" class="nav__link" data-scroll="#contacts">
+                        Контакты
+                    </a>
+                </nav>
+                <button class="burger" type="button" id="navToggle">
+                    <span class="burger__item">Menu</span>
+                </button>
+            </div>
+            <!--/.header__inner-->
+        </div>
+        <!--/.container-->
+    </header>
+
+    <!--INTRO-->
+
+    <div class="intro" id="intro">
+        <div class="container">
+            <div class="intro__inner">
+                <h1 class="intro__title">Студия разработки программного обеспечения</h1>
+                <h2 class="intro__subtitle">Выполняем разработку программных решений любой сложности от задумки до
+                    сопровождения</h2>
+                <button class="btn" id="btn">Заказать проект</button>
+            </div>
+            <!--/.intro__inner-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.intro-->
+
+    <div class="about" id="about">
+        <div class="container">
+            <div class="about__text">
+                Более 15 лет наша команда предоставляет широкий спектр услуг по разработке и продвижению программных
+                продуктов. За это время мы приобрели огромный опыт и профессионализм в решении самых разнообразных задач
+                независимо от их уровня слжожности.<br>
+                В своей работе мы придерживаемся стратегии Win-Win, согласно которой находимся в постоянном поиске и
+                поддержании взаимовыгодного сотрудничества, в стремлении достигнуть наилучших результатов, которые
+                ставят перед нами клиенты.<br>
+                Мы выполняем полный цикл работ от предварительного анализаа и создания до внедрения, тестирования и
+                сопровождения конечных программных продуктов с использованием самых современных технологий разработки.
+            </div>
+        </div>
+    </div>
+
+    <!--FEATURES-->
+
+    <div class="container">
+        <div class="features">
+            <div class="name">
+                <span class="name__head">Наши преимущества</span>
+            </div>
+
+            <div class="features__items">
+                <div class="features__item">
+                    <img class="features__icon" src="img/features/Feature_1.png" alt="Feature_1">
+                    <h4 class="features__title">Профессионализм</h4>
+                    <div class="features__text">В нашей комадне каждый является бесценным специалистом в своей области
+                    </div>
+                </div>
+
+                <div class="features__item">
+                    <img class="features__icon" src="img/features/Feature_2.png" alt="Feature_2">
+                    <h4 class="features__title">Индивидуальный подход</h4>
+                    <div class="features__text">Находим решение для каждого клиента, ориентируясь на требования и задачи
+                    </div>
+                </div>
+
+                <div class="features__item">
+                    <img class="features__icon" src="img/features/Feature_3.png" alt="Feature_3">
+                    <h4 class="features__title">Качество</h4>
+                    <div class="features__text">Мы гарантируем высокое качество продукта и соответствие требованиям
+                        заказчика</div>
+                </div>
+                <div class="features__item">
+                    <img class="features__icon" src="img/features/Feature_4.png" alt="Feature_4">
+                    <h4 class="features__title">Нацеленность на результат</h4>
+                    <div class="features__text">Мы успешно решаем даже самые сложные задачи, для нас нет невозможного
+                    </div>
+                </div>
+
+                <div class="features__item">
+                    <img class="features__icon" src="img/features/Feature_5.png" alt="Feature_5">
+                    <h4 class="features__title">Весь спектр услуг</h4>
+                    <div class="features__text">Мы разрабатываем продукт от постановки задачи до тестирования готового
+                        результатa</div>
+                </div>
+
+                <div class="features__item">
+                    <img class="features__icon" src="img/features/Feature_6.png" alt="Feature_6">
+                    <h4 class="features__title">Гарантии</h4>
+                    <div class="features__text">Гарантируем соответствие продукта критериям и его доработку в будущем
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--/.features-->
+    </div>
+    <!--/.container-->
+
+    <!--WORKS-->
+
+    <div class="works" id="work">
+        <div class="name">
+            <span class="name__head">Услуги</span>
+        </div>
+
+        <div class="works__items">
+            <div class="works__item">
+                <img class="works__photo" src="img/work/work_1.jpg" alt="work_1">
+                <div class="works__content">
+                    <div class="works__title">
+                        Проектирование продукта
+                    </div>
+
+                </div>
+            </div>
+            <div class="works__item">
+                <img class="works__photo" src="img/work/work_2.jpg" alt="work_2">
+                <div class="works__content">
+                    <div class="works__title">
+                        Управление проектами
+                    </div>
+
+                </div>
+            </div>
+            <div class="works__item">
+                <img class="works__photo" src="img/work/work_3.jpg" alt="work_3">
+                <div class="works__content">
+                    <div class="works__title">
+                        Разработка программного обеспечения
+                    </div>
+
+                </div>
+            </div>
+            <div class="works__item">
+                <img class="works__photo" src="img/work/work_4.jpg" alt="work_4">
+                <div class="works__content">
+                    <div class="works__title">
+                        Мобильные приложения
+                    </div>
+                </div>
+            </div>
+            <div class="works__item">
+                <img class="works__photo" src="img/work/work_5.jpg" alt="work_5">
+                <div class="works__content">
+                    <div class="works__title">
+                        Техническая поддержка
+                    </div>
+
+                </div>
+            </div>
+            <div class="works__item">
+                <img class="works__photo" src="img/work/work_6.jpg" alt="work_6">
+                <div class="works__content">
+                    <div class="works__title">
+                        Автоматизация бизнеса
+                    </div>
+
+                </div>
+            </div>
+            <div class="works__item">
+                <img class="works__photo" src="img/work/work_7.jpg" alt="work_7">
+                <div class="works__content">
+                    <div class="works__title">
+                        Дизайн интерфейсов
+                    </div>
+
+                </div>
+            </div>
+            <div class="works__item">
+                <img class="works__photo" src="img/work/work_8.jpg" alt="work_8">
+                <div class="works__content">
+                    <div class="works__title">
+                        SEO-продвижение
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/.works-->
+
+    <!--TEAM-->
+    <div class="team" id="team">
+        <div class="container">
+            <div class="team__inner">
+                <div class="name">
+                    <span class="name__head">Наша команда</span>
+                </div>
+
+                <div class="team__items">
+                    <div class="team__item">
+                        <img class="team__photo" src="img/team/team_1.jpg" alt="team_1">
+                        <div class="team__name">Сергей Егоров</div>
+                        <div class="team__prof">Менеджер проектов</div>
+                        <div class="team__text">Ведение проектов, работа с ключевыми клиентами, управление командой,
+                            распределение обязанностей</div>
+                        <div class="social">
+                            <a class="social__item" href="https://www.facebook.com" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook">
+                                    </use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="https://twitter.com" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter">
+                                    </use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="https://ru.linkedin.com" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#linkedin">
+                                    </use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="team__item">
+                        <img class="team__photo" src="img/team/team_2.jpg" alt="team_2">
+                        <div class="team__name">Андрей Фролов</div>
+                        <div class="team__prof">Технический директор</div>
+                        <div class="team__text">Координация действий технической команды, оптимизация производственных
+                            процессов, составление технической документации</div>
+                        <div class="social">
+                            <a class="social__item" href="https://www.facebook.com" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook">
+                                    </use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="https://twitter.com" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter">
+                                    </use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="https://ru.linkedin.com" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#linkedin">
+                                    </use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="team__item">
+                        <img class="team__photo" src="img/team/team_3.jpg" alt="team_3">
+                        <div class="team__name">Марина Илюшина</div>
+                        <div class="team__prof">Фронтенд разработчик</div>
+                        <div class="team__text">Проектирование и реализация интерфейсов, настройка функционала,
+                            написание скриптов</div>
+                        <div class="social">
+                            <a class="social__item" href="https://www.facebook.com" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook">
+                                    </use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="https://twitter.com" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter">
+                                    </use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="https://ru.linkedin.com" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#linkedin">
+                                    </use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="team__item">
+                        <img class="team__photo" src="img/team/team_4.jpg" alt="team_4">
+                        <div class="team__name">Игорь Попов</div>
+                        <div class="team__prof">Бэкэнд разработчик</div>
+                        <div class="team__text">Обеспечение функционирования продукта, организация работы с базами
+                            данных, API, интеграция с внешними сервисами</div>
+                        <div class="social">
+                            <a class="social__item" href="https://www.facebook.com" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook">
+                                    </use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="https://twitter.com" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter">
+                                    </use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="https://ru.linkedin.com" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#linkedin">
+                                    </use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </div>
+            <!--/.team__inner-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.team-->
+
+
+    <!--PORTFOLIO-->
+    <div class="name">
+        <span class="name__head">Портфолио</span>
+    </div>
+    <div class="portfolio" id="portfolio">
+        <div class="container">
+            <div id="portfolioSlider">
+                <div class="slick__item">
+                    <div class="portfolio__item">
+                        <div class="portfolio__foto">
+                            <img class="portfolio__img" src="img/portfolio/photo_1.jpg" alt="photo_1">
+                        </div>
+                        <div class="portfolio__content">
+                            <div class="portfolio__text">Программное обеспечение для управления оборудованием жилого
+                                помещения</div>
+                            <div class="portfolio__client">Заказчик - компания "Найс технолоджис"</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slick__item">
+                    <div class="portfolio__item">
+                        <div class="portfolio__foto">
+                            <img class="portfolio__img" src="img/portfolio/photo_2.jpg" alt="photo_2">
+                        </div>
+                        <div class="portfolio__content">
+                            <div class="portfolio__text">Программное обеспечение для медицинского оборудования</div>
+                            <div class="portfolio__client">Заказчик - компания "Медикал Солюшен"</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slick__item">
+                    <div class="portfolio__item">
+                        <div class="portfolio__foto">
+                            <img class="portfolio__img" src="img/portfolio/photo_3.jpg" alt="photo_3">
+                        </div>
+                        <div class="portfolio__content">
+                            <div class="portfolio__text">Корпоративный портал компании, позволяющий осуществлять
+                                онлайн-покупку услуг</div>
+                            <div class="portfolio__client">Заказчик - компания "Ритейл мастер"</div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="slick__item">
+                    <div class="portfolio__item">
+                        <div class="portfolio__foto">
+                            <img class="portfolio__img" src="img/portfolio/photo_4.jpg" alt="photo_3">
+                        </div>
+                        <div class="portfolio__content">
+                            <div class="portfolio__text">Мобильное приложение по изучению иностранных языков</div>
+                            <div class="portfolio__client">Заказчик - компания "ЛисКом"</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--/.container-->
+        </div>
+
+        <!--/.container-->
+    </div>
+    <!--/.portfolio-->
+
+    <!--CONSULTATION-->
+    <div class="consultation" id="contacts">
+        <div class="container">
+            <h3 class="consultation__title">Готовы обсудить заказ?</h3>
+            <div class="consultation__text">
+                <p>Консультация бесплатна</p>
+            </div>
+            <button class="btn btn_long" id="btnLong">Получить консультацию</button>
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.consultation-->
+
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__block">
+                    <h4 class="footer__title">Контакты</h4>
+                    <address class="footer__address">
+                        <div> Минск, ул. Тимирязева, 21, офис 5 </div>
+                        <div> +375 (029) 122-10-12</div>
+                        <div> info@itlab.by </div>
+                    </address>
+                </div>
+
+                <div class="footer__block">
+                    <h4 class="footer__title">Мы в соцсетях</h4>
+                    <div class="social social_footer">
+                        <a class="social__item" href="https://www.facebook.com" target="_blank">
+                            <svg class="social__icon">
+                                <use xlink:href="#facebook">
+                                </use>
+                            </svg>
+                        </a>
+                        <a class="social__item" href="https://twitter.com" target="_blank">
+                            <svg class="social__icon">
+                                <use xlink:href="#twitter">
+                                </use>
+                            </svg>
+                        </a>
+                        <a class="social__item" href="https://ru.linkedin.com" target="_blank">
+                            <svg class="social__icon">
+                                <use xlink:href="#linkedin">
+                                </use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__block">
+                    <h4 class="footer__title">ITlab</h4>
+                    <div class="footer__text">
+                        <p class="footer__width"> Лидеры в разработке самых разнообразных программных продуктов любой
+                            сложности и любого
+                            масштаба</p>
+                    </div>
+                </div>
+
+            </div>
+            <!--/.footer__inner-->
+            <div class="footer__copyright">
+                <div>Copyright © 2023 ITlab. Все права защищены.</div>
+                <div>Made<span> by Kamal Chaneman</span></div>
+            </div>
+        </div>
+        <!--/.container-->
+
+    </footer>
+    <!--/.footer-->
+
+    <!--MODAL-->
+    <div class="modal" id="modal-call">
+        <div class="modal__window">
+            
+            <div class="modal__cross" id="exit">
+                <svg class="social__icon">
+                    <use xlink:href="#cross">
+                    </use>
+                </svg>
+            </div>
+            <div class="modal__inner">
+                <h4 class="modal__title">Мы перезвоним Вам в течение 20 минут</h4>
+               
+                    <form class="modal__block">
+                    <input class="modal__input" type="text" placeholder="Ваше имя">
+                    <input class="modal__input" type="tel" placeholder="Номер телефона">
+                    <button class="btn" id="btn-call">Заказать звонок</button>
+                </form>
+                
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal-response">
+        <div class="modal__window">
+            
+                     <div class="modal__inner">
+                <h4 class="modal__title">Спасибо!</h4>
+               <p class="modal__text">Ожидайте звонка нашего специлиста</p>
+                    <form class="modal__block">
+                                        <button class="btn" id="btn-close">Закрыть</button>
+                </form>
+                
+
+            </div>
+        </div>
+    </div>
+    <!-- JAVASCRIPT>-->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+
+body {
+	background: #000;
+ }
+
+ .content {
+ background-color:#fff;
+ margin: 50px;
+ width:200px;
+ height:200px;
+ border-radius:50%;
+ animation-name: circle;
+ animation-duration: 2s;
+ }
+
+ @keyframes circle{
+	0% {
+	  left: 10px;
+	}
+	100% {
+	   left: 500px;
+	}
+ }
